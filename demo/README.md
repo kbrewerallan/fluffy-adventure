@@ -13,7 +13,7 @@ Download and installation instructions can be found here - https://maven.apache.
 
 # Setup and Run
 
-To ensure tests work please update teh Constants.java file references for PASSWORD and EMAIL to be your normal login values.
+To ensure tests work please update the Constants.java file references for PASSWORD and EMAIL to be your normal login values.
 
 To run the tests use any chosen IDE ([Eclipse](https://www.eclipse.org/downloads/) / [VScode](https://code.visualstudio.com/) with [Java](https://code.visualstudio.com/docs/languages/java) plugins will work).
 
