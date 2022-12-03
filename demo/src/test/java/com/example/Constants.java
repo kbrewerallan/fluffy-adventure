@@ -9,7 +9,7 @@ public class Constants {
   /**
    * Hudl main home page title.
    */
-  public static final String TITLE_HUDL_HOME = "Performance analysis tools for sports teams and athletes at every level.";
+  public static final String TITLE_HUDL_HOME = "Hudl • Tools to help every team, coach and athlete improve";
 
   /**
    * Hudl organization login page title.

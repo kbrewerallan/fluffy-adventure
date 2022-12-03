@@ -33,19 +33,19 @@ public class LoginPage extends LayoutPage {
   @FindBy(css = "[for='remember-me']")
   private WebElement chkRememberMeInteractable;
 
-  @FindBy(id = "forgot-password-link")
+  @FindBy(css = "[data-qa-id='need-help-link']")
   private WebElement lnkNeedHelp;
 
-  @FindBy(id = "logInWithOrganization")
+  @FindBy(css = "[data-qa-id='log-in-with-organization-btn']")
   private WebElement lnkLoginWithOrganisation;
 
-  @FindBy(className = "sign-up-trial")
+  @FindBy(css = "[href='/register/signup']")
   private WebElement lnkSignUp;
 
   @FindBy(className = "login-container")
   private WebElement loginContainer;
 
-  @FindBy(className = "reset-info")
+  @FindBy(css = "[data-qa-id='lets-reset-password-headline']")
   private WebElement resetContainer;
 
   @FindBy(className = "login-error-container")
@@ -71,7 +71,7 @@ public class LoginPage extends LayoutPage {
   }
 
   private WebElement imgHudl() {
-    return loginContainer.findElement(By.className("hudl-logo-login"));
+    return loginContainer.findElement(By.cssSelector("[data-qa-id='hudl-logo']"));
   }
 
   /**
