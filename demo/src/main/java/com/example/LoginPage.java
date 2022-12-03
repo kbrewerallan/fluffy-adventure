@@ -48,6 +48,9 @@ public class LoginPage extends LayoutPage {
   @FindBy(css = "[data-qa-id='lets-reset-password-headline']")
   private WebElement resetContainer;
 
+  @FindBy(css = "[data-qa-id='hudl-logo']")
+  private WebElement imgHudl;
+
   @FindBy(className = "login-error-container")
   private WebElement loginErrorContainer;
 
@@ -68,10 +71,6 @@ public class LoginPage extends LayoutPage {
 
   private WebElement btnBackToHudl() {
     return driver.findElement(By.className("back-to-hudl")).findElement(By.className("icon-back"));
-  }
-
-  private WebElement imgHudl() {
-    return loginContainer.findElement(By.cssSelector("[data-qa-id='hudl-logo']"));
   }
 
   /**
@@ -264,8 +263,8 @@ public class LoginPage extends LayoutPage {
    * @return an instance of the {@link HudlHomePage}.
    */
   public HudlHomePage clickHudlLogo() {
-    wait.until(ExpectedConditions.visibilityOf(imgHudl()));
-    imgHudl().click();
+    wait.until(ExpectedConditions.visibilityOf(imgHudl));
+    imgHudl.click();
     return new HudlHomePage(driver);
   }
 
