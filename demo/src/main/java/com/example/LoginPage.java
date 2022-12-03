@@ -48,7 +48,7 @@ public class LoginPage extends LayoutPage {
   @FindBy(css = "[data-qa-id='lets-reset-password-headline']")
   private WebElement resetContainer;
 
-  @FindBy(css = "[data-qa-id='hudl-logo']")
+  @FindBy(css = "[class*='hudlLogoContainer']")
   private WebElement imgHudl;
 
   @FindBy(className = "login-error-container")
