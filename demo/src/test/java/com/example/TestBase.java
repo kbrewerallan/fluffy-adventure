@@ -27,8 +27,8 @@ public class TestBase {
       e.printStackTrace();
     }
     driver = new DriverFactory().getDriver(Constants.CHROME);
-    email = System.getProperty("user.email")
-    password = System.getProperty("user.password")
+    email = System.getProperty("user.email");
+    password = System.getProperty("user.password");
   }
 
   @BeforeEach
