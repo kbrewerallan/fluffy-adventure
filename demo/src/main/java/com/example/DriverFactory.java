@@ -33,8 +33,11 @@ public class DriverFactory {
         ChromeOptions options = new ChromeOptions();
         String localTemp = String.format("%s/target/generated-test-sources/", System.getProperty("user.dir"));
         options.addArguments(String.format("user-data-dir=%s", localTemp));
+        options.addArguments("--headless")
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         WebDriver cDriver = new ChromeDriver(options);
-        cDriver.manage().window().maximize();
+        // cDriver.manage().window().maximize();
         cDriver.manage().timeouts().setScriptTimeout(30000, TimeUnit.MILLISECONDS);
         return cDriver;
       default:
