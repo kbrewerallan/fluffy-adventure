@@ -18,7 +18,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      user.email: "{{secrets.EMAIL}}"
+      user.password: "{{secrets.PASSWORD}}"
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11

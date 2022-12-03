@@ -20,14 +20,14 @@ public class LoginTests extends TestBase {
 
   @Test
   public void testValidLogin() {
-    login.login(Constants.EMAIL, Constants.PASSWORD);
+    login.login(email, password);
     HomePage home = new HomePage(driver);
     assertEquals(Constants.TITLE_HOME, home.getTitle(), "Homepage title did not match expected.");
   }
 
   @Test
   public void testLogout() {
-    login.login(Constants.EMAIL, Constants.PASSWORD);
+    login.login(email, password);
     HomePage home = new HomePage(driver);
     HudlHomePage hudlHome = home.logout();
     assertEquals(Constants.TITLE_HUDL_HOME, hudlHome.getTitle(), "Hudl homepage title did not match expected.");
@@ -37,7 +37,7 @@ public class LoginTests extends TestBase {
   public void testRememberMe() {
     assertFalse(login.isRememberMeSelected(), "Remember me checkbox was selected by default.");
     login.selectRememberMe();
-    login.login(Constants.EMAIL, Constants.PASSWORD);
+    login.login(email, password);
     HomePage home = new HomePage(driver);
     assertEquals(Constants.TITLE_HOME, home.getTitle(), "Homepage title was not expected value.");
 
@@ -56,15 +56,15 @@ public class LoginTests extends TestBase {
         Arguments.of("aaa", "aaa"),
         Arguments.of("aaa@", ""),
         Arguments.of("aaa@test.com", "aaa"),
-        Arguments.of(Constants.EMAIL, ""),
-        Arguments.of(Constants.EMAIL, "NotMyPassword"),
-        Arguments.of(Constants.EMAIL, "@!'''''--"));
+        Arguments.of(email, ""),
+        Arguments.of(email, "NotMyPassword"),
+        Arguments.of(email, "@!'''''--"));
   }
 
   @ParameterizedTest
   @MethodSource("provideEmailAndPasswords")
-  public void testInvalidLogins(String email, String password) {
-    login.login(email, password);
+  public void testInvalidLogins(String givenEmail, String givenPassword) {
+    login.login(givenEmail, givenPassword);
     assertEquals(INVALID_LOGIN, login.getLoginErrorMessage(), "Invalid login error message was not present.");
   }
 

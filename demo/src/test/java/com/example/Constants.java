@@ -1,17 +1,6 @@
 package com.example;
 
 public class Constants {
-
-  /**
-   * Users password for logging in.
-   */
-  public static final String PASSWORD = "";
-
-  /**
-   * Users email address for logging in.
-   */
-  public static final String EMAIL = "";
-
   /**
    * Hudl logged in home page title.
    */

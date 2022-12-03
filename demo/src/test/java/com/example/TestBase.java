@@ -13,6 +13,8 @@ public class TestBase {
 
   public WebDriver driver;
   public LoginPage login;
+  public String email;
+  public String password;
 
   @BeforeAll
   void setup() {
@@ -25,6 +27,8 @@ public class TestBase {
       e.printStackTrace();
     }
     driver = new DriverFactory().getDriver(Constants.CHROME);
+    email = System.getProperty("user.email")
+    password = System.getProperty("user.password")
   }
 
   @BeforeEach
