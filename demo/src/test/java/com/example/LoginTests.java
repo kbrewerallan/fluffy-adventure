@@ -14,6 +14,7 @@ import org.junit.jupiter.params.provider.MethodSource;
  * Simple test of the login / logout functionality of the hudl login page with
  * checks for invalid formats.
  */
+@Disabled("Fixes Needed")
 public class LoginTests extends TestBase {
 
   private static final String INVALID_LOGIN = "We didn't recognize that email and/or password. Need help?";
