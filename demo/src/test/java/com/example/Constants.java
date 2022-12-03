@@ -24,7 +24,7 @@ public class Constants {
   /**
    * Login page title.
    */
-  public static final String TITLE_LOGIN = "Log Inl";
+  public static final String TITLE_LOGIN = "Log In";
 
   /**
    * Hudl login url
